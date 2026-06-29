@@ -1,0 +1,15 @@
+{% extends 'home_02.html' %}
+{% load static %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="enter your name">
+    <input type="number" name="age" placeholder="enter your age">
+    <input type="tel" name="phone" placeholder="enter your phone number">
+    <input type="email" name="email" placeholder="enter your email">
+    <textarea name="address" placeholder="enter your address"></textarea>
+    <input type="password" name="password" placeholder="enter your password">
+    <input type="password" name="confrim_password" placeholder="confirm password">
+    <button type="submit">Register</button>
+</form>
+{% endblock %}

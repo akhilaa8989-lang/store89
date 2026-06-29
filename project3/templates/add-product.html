@@ -1,0 +1,54 @@
+{% extends 'home_02.html' %}
+{% load static %}
+{% block content %}
+
+<section class="bg0 p-t-80 p-b-80">
+    <div class="container">
+        <div class="flex-c">
+            <div class="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
+
+                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <h4 class="mtext-105 cl2 txt-center p-b-30">
+                        Add Product
+                    </h4>
+
+                    <div class="bor8 m-b-20">
+                        <input
+                            class="stext-111 cl2 plh3 size-116 p-l-28 p-r-30"
+                            type="text"
+                            name="product_name"
+                            placeholder="Enter Product Name"
+                            required>
+                    </div>
+
+                    <div class="bor8 m-b-20">
+                        <input
+                            class="stext-111 cl2 plh3 size-116 p-l-28 p-r-30"
+                            type="text"
+                            name="price"
+                            placeholder="Enter Price"
+                            required>
+                    </div>
+
+                    <div class="bor8 m-b-30 p-l-28 p-r-28 p-tb-15">
+                        <input
+                            class="stext-111 cl2"
+                            type="file"
+                            name="product_img"
+                            required>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
+                        Add Product
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

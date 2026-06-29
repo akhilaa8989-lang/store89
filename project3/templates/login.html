@@ -1,0 +1,9 @@
+{% extends 'home_02.html' %}
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+     <input type="text",name="Name" placeholder="enter your name">
+     <input type="password",name="Pwd" placeholder="enter your password">
+    <button type ="submit">log in</button>
+</form>
+{% endblock %}
