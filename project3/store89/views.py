@@ -2,19 +2,19 @@ from django.shortcuts import render ,redirect
 from django.http import HttpResponse
 from .forms import *
 from .models import *
-from django.contrib.auth.decorators import login_required
+
 
 # Create your views here.
-@login_required
+
 def index(request):
     return render(request,'index.html')  
-@login_required
+
 def blog(request):
     return render(request,'blog.html')
-@login_required
+
 def blog_detail(request):
     return render(request,'blog_detail.html')
-@login_required
+
 def contact(request):
     return render(request,'contact.html')
 
@@ -23,16 +23,16 @@ def home_02(request):
 
 def home_03(request):
     return render(request,'home_03.html')
-@login_required
+
 def about(request):
     return render(request,'about.html')
-@login_required
+
 def product_detail(request):
     return render(request,'product_detail.html')
-@login_required
+
 def shoping_cart(request):
     return render(request,'shoping_cart.html')
-@login_required
+
 def index(request):
     return render(request, 'index.html')
 
@@ -49,7 +49,7 @@ def register(request):
     return render(request,'register.html',{"form":customer})
 
 
-@login_required
+
 def add_product(request):
     if request.method == "POST":
         form = productForm(request.POST,request.FILES)
@@ -61,7 +61,7 @@ def add_product(request):
     else:
         form = productForm()    
     return render(request, 'add-product.html',{"form":form})   
-@login_required
+
 def product(request):
     products = productsModoel.objects.all()
     return render(request,'product.html',{"products":products})
