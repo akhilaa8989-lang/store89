@@ -71,14 +71,13 @@ def product(request):
 def login(request):
     if request.method == "POST":
        
-        email = request.POST.get('Email')
-        password = request.POST.get('Pwd')
+        Email = request.POST.get('Email')
+        Pwd = request.POST.get('Pwd')
 
 
         user = CustomerModel.objects.get(email = Email)
 
-        if user.email == Email and user.pwd == Pwd:
-            login(request,user)
+        if user.email == Email and user.password == Pwd:
             return redirect('/product')
         else:
             return HttpResponse('invalid user or password')
