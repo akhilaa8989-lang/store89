@@ -2,7 +2,6 @@ from django.shortcuts import render ,redirect
 from django.http import HttpResponse
 from .forms import *
 from .models import *
-from django.contrib.auth import authenticate , login
 
 # Create your views here.
 def index(request):
@@ -69,14 +68,16 @@ def product(request):
 
 def login(request):
     if request.method == "POST":
-        username =  request.POST.get('Name')
+       
+        email = request.POST.get('Email')
         password = request.POST.get('Pwd')
 
-        user = authenticate(request,username = username , password = password)
 
-        if user is not None:
+        user = CustomerModel.objects.get(email = Email)
+
+        if user.email == Email and user.pwd == Pwd:
             login(request,user)
-            return redirect('/')
+            return redirect('/product')
         else:
-            return HttpResponse(request,'invalid user or password')
+            return HttpResponse('invalid user or password')
     return render(request,'login.html')

@@ -264,7 +264,43 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   background-color: #222;
 }
 
+.register{
+  width: 500px;
+  display: flex;
+  height: 350px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: 5px 8px 8px 20px rgba(240, 248, 255, 0.058);
+  justify-content: space-evenly;
+  box-shadow: 2px 2px 2px 2px grey;
+}
+.register input{
+    width: 80%;
+    padding: 5px 5px 5px 20px;
+    border: 1px solid grey;
+    border-radius: none;
 
+}
+.register input:focus{
+    outline: 1px solid rgba(128, 128, 128, 0.259);
+    border-radius: 5px;
+}
+.register_browse{
+    width: 50px;
+    background-color: rgba(240, 248, 255, 0.268);
+}
+.register button{
+    height: 45px;
+    color: rgb(34, 33, 33);
+    background-color: rgba(240, 248, 255, 0.268);
+    outline: 1px solid rgba(128, 128, 128, 0.259);
+    width: 80%;
+    
+}
+.register button:hover{
+    background-color: aquamarine
+}
 
 /*==================================================================
 [ Menu ]*/

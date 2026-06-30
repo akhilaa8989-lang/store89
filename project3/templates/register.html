@@ -1,6 +1,7 @@
 {% extends 'home_02.html' %}
 {% load static %}
 {% block content %}
+<section class="register">
 <form method="post">
     {% csrf_token %}
     <input type="text" name="name" placeholder="enter your name">
@@ -12,4 +13,5 @@
     <input type="password" name="confrim_password" placeholder="confirm password">
     <button type="submit">Register</button>
 </form>
+</section>
 {% endblock %}
