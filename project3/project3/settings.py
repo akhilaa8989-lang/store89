@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-0w&-5ll(@8hhx#^b87ft9f9&5=x-c25xp9)ei+n^t^+3ogn)!9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'store89-qi3h.onrender.com',
+]
 
 
 # Application definition
@@ -123,3 +125,8 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'medias'
+STORAGES = {
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
