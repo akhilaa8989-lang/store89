@@ -54,7 +54,6 @@
 					<!-- Menu desktop -->
 					<div class="menu-desktop">
 						<ul class="main-menu">
-							{% if user.is_authenticated %}
 							<li class="active-menu">
 								<a href="{% url 'index' %}">Home</a>
 								<ul class="sub-menu">
@@ -77,12 +76,10 @@
 							<li><a href="#">Services</a></li>
 
 							<li><a href="#">Logout</a></li>
-							
-							{% else %}
+
 							<li><a href="{% url 'home_02' %}">Homepage 2</a></li>
 							<li><a href="{% url 'register' %}">Register</a></li>
 							<li><a href="{% url 'login' %}">login</a></li>
-							{% endif %}
 						</ul>
 					</div>	
 
