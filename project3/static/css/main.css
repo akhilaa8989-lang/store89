@@ -270,8 +270,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   height: 350px;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  background-color: 5px 8px 8px 20px rgba(240, 248, 255, 0.058);
+  flex-direction: center;
+  background-color: 20px 8px 8px 20px rgba(240, 248, 255, 0.058);
   justify-content: space-evenly;
   box-shadow: 2px 2px 2px 2px grey;
 }
@@ -299,7 +299,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
     
 }
 .register button:hover{
-    background-color: aquamarine
+    background-color: voilet;
 }
 
 /*==================================================================
